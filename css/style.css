@@ -198,6 +198,7 @@ body {
 }
 
 a {
+  color: #000;
   text-decoration: none;
 }
 
@@ -243,20 +244,22 @@ p {
 
 @media (min-width: 576px) {
   .header h1 {
-    top: 3.5vh;
+    top: 3.7vh;
     left: 3vw;
     font-size: 2.5rem;
   }
 }
 @media (min-width: 768px) {
   .header h1 {
-    top: 2.6vh;
+    top: 3vh;
     left: 2vw;
     font-size: 3.2rem;
   }
 }
-/*========= ナビゲーション ===============*/
+/*========= ナビゲーションのためのCSS ===============*/
+/*アクティブになったエリア*/
 #g-nav.panelactive {
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
   position: fixed;
   z-index: 999;
   top: 0;
@@ -271,26 +274,36 @@ p {
   background: #fff;
 }
 
+/*丸の拡大*/
 .circle-bg {
   position: fixed;
   z-index: 3;
+  /*丸の形*/
   width: 100px;
   height: 100px;
   border-radius: 50%;
   border: 2px solid #000;
+  /*丸のスタート位置と形状*/
   transform: scale(0);
+  /*scaleをはじめは0に*/
   top: calc(50% - 50px);
+  /*50%から円の半径を引いた値*/
   left: calc(50% - 50px);
+  /*50%から円の半径を引いた値*/
   transition: all 0.6s;
+  /*0.6秒かけてアニメーション*/
 }
 
 .circle-bg.circleactive {
   transform: scale(50);
+  /*クラスが付与されたらscaleを拡大*/
 }
 
 /*ナビゲーションの縦スクロール*/
 #g-nav-list {
   display: none;
+  /*はじめは表示なし*/
+  /*ナビの数が増えた場合縦スクロール*/
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -301,10 +314,14 @@ p {
 
 #g-nav.panelactive #g-nav-list {
   display: block;
+  /*クラスが付与されたら出現*/
 }
 
+/*ナビゲーション*/
 #g-nav ul {
   opacity: 0;
+  /*はじめは透過0*/
+  /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
   position: absolute;
   z-index: 999;
   top: 50%;
@@ -312,14 +329,17 @@ p {
   transform: translate(-50%, -50%);
 }
 
+/*背景が出現後にナビゲーションを表示*/
 #g-nav.panelactive ul {
   opacity: 1;
 }
 
+/* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
 #g-nav.panelactive ul li {
   animation-name: gnaviAnime;
   animation-duration: 1s;
   animation-delay: 0.2s;
+  /*0.2 秒遅らせて出現*/
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -332,6 +352,7 @@ p {
     opacity: 1;
   }
 }
+/*リストのレイアウト設定*/
 #g-nav li {
   text-align: center;
   list-style: none;
@@ -343,22 +364,24 @@ p {
   padding: 25px;
   display: block;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   font-size: 2.5rem;
   font-weight: bold;
-  letter-spacing: 0.1em;
 }
 
-/*========= ボタン ===============*/
+/*========= ボタンのためのCSS ===============*/
 .openbtn {
   position: fixed;
   top: 2vh;
   right: 2vw;
   z-index: 9999;
+  /*ボタンを最前面に*/
   cursor: pointer;
   width: 50px;
   height: 50px;
 }
 
+/*×に変化*/
 .openbtn span {
   display: inline-block;
   transition: all 0.4s;
