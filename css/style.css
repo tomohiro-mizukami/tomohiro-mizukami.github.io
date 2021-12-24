@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
@@ -188,7 +189,7 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
-  color: #4c4c4c;
+  color: #000;
 }
 @media (min-width: 769px) {
   body {
@@ -209,12 +210,10 @@ h1,
 h2 {
   font-family: "Kaisei Opti", serif;
   font-weight: 700;
-  color: #1e4055;
 }
 
 h4 {
   font-weight: 500;
-  color: #222;
 }
 
 p {
@@ -234,21 +233,173 @@ p {
   text-transform: uppercase;
 }
 
-.header {
-  position: absolute;
-}
 .header h1 {
-  padding: 1.5rem 2rem;
-  font-size: 2rem;
-  background-color: #fff;
+  position: fixed;
+  z-index: 9999;
+  top: 4.5vh;
+  left: 4vw;
+  font-size: 1.8rem;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 576px) {
   .header h1 {
-    padding: 3rem 5rem;
-    font-size: 4rem;
+    top: 3.5vh;
+    left: 3vw;
+    font-size: 2.5rem;
   }
 }
+@media (min-width: 768px) {
+  .header h1 {
+    top: 2.6vh;
+    left: 2vw;
+    font-size: 3.2rem;
+  }
+}
+/*========= ナビゲーション ===============*/
+#g-nav.panelactive {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  /*ナビゲーションの背景色*/
+  animation-name: gnaviAnime;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  background: #fff;
+}
+
+.circle-bg {
+  position: fixed;
+  z-index: 3;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  transform: scale(0);
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  transition: all 0.6s;
+}
+
+.circle-bg.circleactive {
+  transform: scale(50);
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav-list {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#g-nav.panelactive #g-nav-list {
+  display: block;
+}
+
+#g-nav ul {
+  opacity: 0;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#g-nav.panelactive ul {
+  opacity: 1;
+}
+
+#g-nav.panelactive ul li {
+  animation-name: gnaviAnime;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes gnaviAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#g-nav li {
+  text-align: center;
+  list-style: none;
+}
+
+#g-nav li a {
+  color: #333;
+  text-decoration: none;
+  padding: 25px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+/*========= ボタン ===============*/
+.openbtn {
+  position: fixed;
+  top: 2vh;
+  right: 2vw;
+  z-index: 9999;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+.openbtn span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #333;
+  width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
 .cover {
   display: flex;
   align-items: center;
@@ -596,7 +747,7 @@ p {
 .slick-next::before {
   font-family: FontAwesome;
   font-size: 3rem;
-  color: #222;
+  color: #000;
   opacity: 1;
 }
 

@@ -1,36 +1,38 @@
 aside {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 8.6rem;
-    height: 100vh;
-    border-left: 2px solid $blue1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 8.6rem;
+  height: 100vh;
+  border-left: 2px solid $blue1;
 }
 
 #roop {
-    width: 8.6rem;
-    height: 100%;
-    background: url("../images/tomohiromizukami.com.png");
-    background-position: 0 0;
-    background-size: 100%;
-    -webkit-animation: bgroop 90s linear infinite;
-    animation: bgroop 90s linear infinite;
+  width: 8.6rem;
+  height: 100%;
+  background: url("../images/tomohiromizukami.com.png");
+  background-position: 0 0;
+  background-size: 100%;
+  -webkit-animation: bgroop 90s linear infinite;
+  animation: bgroop 90s linear infinite;
 }
 
 @-webkit-keyframes bgroop {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 0 2132px;
-    }
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 2132px;
+  }
 }
 
 @keyframes bgroop {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 0 2132px;
-    }
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 2132px;
+  }
 }

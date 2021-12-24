@@ -1,105 +1,114 @@
 .contact {
-    padding: 2.5rem 0;
-    .section-heading>span {
-        top: -4.1rem;
-        right: -.6rem;
-        padding-right: 1rem;
-    }
+  padding: 2.5rem 0;
+
+  .section-heading>span {
+    top: -4.1rem;
+    right: -.6rem;
+    padding-right: 1rem;
+  }
 }
 
 form {
-    padding: 5rem 0;
-    background-color: $blue2;
-    border-left: 2px solid $blue1;
-    border-right: 2px solid $blue1;
-    border-bottom: 2px solid $blue1;
+  padding: 5rem 0;
+  background-color: $blue2;
+  border-left: 2px solid $blue1;
+  border-right: 2px solid $blue1;
+  border-bottom: 2px solid $blue1;
 }
 
 input,
 textarea {
-    display: block;
-    width: 83%;
-    margin: 0 auto;
-    border: 2px solid $blue1;
+  display: block;
+  width: 83%;
+  margin: 0 auto;
+  border: 2px solid $blue1;
 }
 
 input {
-    padding: 2.4rem 2rem;
-    margin-bottom: 5rem;
-    &:last-child {
-        margin-bottom: 0;
-        font-size: 1.4rem;
-        color: $white;
-        background-color: #e59759;
-        transition: all .25s linear;
-        &:hover {
-            color: $navy;
-            background-color: $white;
-            border: 2px solid $navy;
-            cursor: pointer;
-        }
+  padding: 2.4rem 2rem;
+  margin-bottom: 5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    color: $white;
+    background-color: #e59759;
+    transition: all .25s linear;
+
+    &:hover {
+      color: $navy;
+      background-color: $white;
+      border: 2px solid $navy;
+      cursor: pointer;
     }
+  }
 }
 
 textarea {
-    height: 18rem;
-    padding: 2.4rem 2rem;
-    margin-bottom: 4rem;
+  height: 18rem;
+  padding: 2.4rem 2rem;
+  margin-bottom: 4rem;
 }
 
 ::placeholder {
-    font-size: 1.4rem;
-    color: $gray2;
+  font-size: 1.4rem;
+  color: $gray2;
 }
 
 @media (min-width: 769px) {
-    .contact {
-        padding: 10rem 0;
-        .container {
-            padding: 0;
-        }
-        .section-heading>span {
-            top: -5.7rem;
-            left: .4rem;
-        }
-        .section-title {
-            display: flex;
-            flex-direction: row-reverse;
-            span {
-                border-right: none;
-                border-left: 2px solid $blue1;
-            }
-            h3 {
-                padding: 0 5rem 0 0;
-            }
-        }
+  .contact {
+    padding: 10rem 0;
+
+    .container {
+      padding: 0;
     }
 
-    form {
-        margin-left: 5rem;
-        padding: 10rem 0;
+    .section-heading>span {
+      top: -5.7rem;
+      left: .4rem;
+    }
+
+    .section-title {
+      display: flex;
+      flex-direction: row-reverse;
+
+      span {
         border-right: none;
-    }
+        border-left: 2px solid $blue1;
+      }
 
-    input,
-    textarea {
-        width: 65%;
+      h3 {
+        padding: 0 5rem 0 0;
+      }
     }
+  }
 
-    input {
-        padding: 2.5rem 5rem;
-        &:last-child {
-            font-size: 1.8rem;
-        }
-    }
+  form {
+    margin-left: 5rem;
+    padding: 10rem 0;
+    border-right: none;
+  }
 
-    textarea {
-        height: 35rem;
-        padding: 2.5rem 5rem;
-        margin-bottom: 4rem;
-    }
+  input,
+  textarea {
+    width: 65%;
+  }
 
-    ::placeholder {
-        font-size: 1.6rem;
+  input {
+    padding: 2.5rem 5rem;
+
+    &:last-child {
+      font-size: 1.8rem;
     }
+  }
+
+  textarea {
+    height: 35rem;
+    padding: 2.5rem 5rem;
+    margin-bottom: 4rem;
+  }
+
+  ::placeholder {
+    font-size: 1.6rem;
+  }
 }

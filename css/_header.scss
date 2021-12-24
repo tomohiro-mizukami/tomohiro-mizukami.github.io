@@ -1,17 +1,29 @@
 .header {
-    position: absolute;
-    h1 {
-        padding: 1.5rem 2rem;
-        font-size: 2rem;
-        background-color: $white;
-    }
+  h1 {
+    position: fixed;
+    z-index: 9999;
+    top: 4.5vh;
+    left: 4vw;
+    font-size: 1.8rem;
+  }
 }
 
-@media (min-width: 769px) {
-    .header {
-        h1 {
-            padding: 3rem 5rem;
-            font-size: 4rem;
-        }
+@media (min-width: 576px) {
+  .header {
+    h1 {
+      top: 3.5vh;
+      left: 3vw;
+      font-size: 2.5rem;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    h1 {
+      top: 2.6vh;
+      left: 2vw;
+      font-size: 3.2rem;
+    }
+  }
 }
