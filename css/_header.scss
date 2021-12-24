@@ -1,0 +1,17 @@
+.header {
+    position: absolute;
+    h1 {
+        padding: 1.5rem 2rem;
+        font-size: 2rem;
+        background-color: $white;
+    }
+}
+
+@media (min-width: 769px) {
+    .header {
+        h1 {
+            padding: 3rem 5rem;
+            font-size: 4rem;
+        }
+    }
+}

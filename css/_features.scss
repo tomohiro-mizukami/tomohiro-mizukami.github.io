@@ -1,0 +1,62 @@
+.features {
+    padding-top: 5rem;
+    background-color: $blue2;
+    .section-heading>span {
+        top: -3.6rem;
+        right: 2rem;
+    }
+}
+
+.feature {
+    background-color: $white;
+    border-left: 2px solid $blue1;
+    border-right: 2px solid $blue1;
+}
+
+.feature-box {
+    height: 28rem;
+    padding-top: 7.5rem;
+    border-bottom: 2px solid $blue1;
+    h4 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.2rem;
+        margin-bottom: 3.5rem;
+        text-align: center;
+    }
+    p {
+        padding: 0 2.5rem 0 4.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .features {
+        padding-top: 20rem;
+        .container {
+            padding: 0 0 0 5rem;
+        }
+        .section-heading>span {
+            top: -7.8rem;
+            right: 7rem;
+        }
+    }
+    .feature {
+        display: flex;
+        border-right: none;
+    }
+    .feature-box {
+        padding-top: 10rem;
+        width: calc(100% / 3);
+        height: 40rem;
+        border-right: 2px solid $blue1;
+        &:last-child {
+            border-right: none;
+        }
+        h4 {
+            font-size: 2.4rem;
+            margin-bottom: 7rem;
+        }
+        p {
+            padding: 0 16.25% 0 22.5%;
+        }
+    }
+}

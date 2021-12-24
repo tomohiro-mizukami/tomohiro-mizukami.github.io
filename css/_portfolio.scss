@@ -1,0 +1,211 @@
+.portfolio {
+    padding: 5rem 0 2.5rem 0;
+    background-color: $blue2;
+    .section-heading>span {
+        top: -3.8rem;
+    }
+}
+
+.portfolio-body {
+    border-left: 2px solid $blue1;
+    border-right: 2px solid $blue1;
+}
+
+.portfolio-img {
+    background: url("../images/wallpaper.png");
+    border-bottom: 2px solid $blue1;
+    picture {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 28rem;
+        padding-top: 2.5rem;
+        background-color: rgba(255, 255, 255, .7);
+    }
+    img {
+        width: 18rem;
+    }
+}
+
+.portfolio-content {
+    background-color: $white;
+    .portfolio-title {
+        padding: 2.2rem 0 1.5rem 2.2rem;
+        border-bottom: 2px solid $blue1;
+        h4 {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.portfolio-description {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: $gray1;
+    border-bottom: 2px solid $blue1;
+    dt {
+        width: 38%;
+        padding: 1.3rem 0 1.3rem 2.2rem;
+        border-right: 2px solid $blue1;
+    }
+    dd {
+        width: 62%;
+        padding-left: 3.3rem;
+    }
+}
+
+.slick-prev,
+.slick-next {
+    z-index: 10;
+    top: 48%;
+    width: 26.25px;
+    height: 30px;
+}
+
+.slick-prev {
+    left: calc(50% - 4.2rem);
+}
+
+.slick-next {
+    right: calc(50% - 4.2rem);
+}
+
+.slick-prev::before,
+.slick-next::before {
+    font-family: FontAwesome;
+    font-size: 3rem;
+    color: $black1;
+    opacity: 1;
+}
+
+.slick-prev::before {
+    content: "\f060";
+}
+
+.slick-next::before {
+    content: "\f061";
+}
+
+@media (min-width: 769px) {
+    .portfolio {
+        padding: 20rem 0 10rem 0;
+        .container {
+            padding: 0 0 0 5rem;
+        }
+        .section-heading>span {
+            top: -6rem;
+            right: 3rem;
+        }
+    }
+
+    .portfolio-body {
+        height: 40rem;
+        border-right: none;
+        &.slick-slide {
+            display: flex;
+        }
+    }
+
+    .portfolio-img {
+        width: 50%;
+        border-right: 2px solid $blue1;
+        picture {
+            align-items: center;
+            height: 100%;
+            padding-top: 0;
+        }
+        img {
+            width: calc(100% / 3 * 2);
+            max-width: 40rem;
+        }
+    }
+
+    .portfolio-content {
+        width: 50%;
+        .portfolio-title {
+            height: 25.6rem;
+            padding: 5rem 0 0 8.5%;
+            h4 {
+                margin-bottom: 2rem;
+            }
+            span {
+                display: block;
+                margin-bottom: 6rem;
+            }
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .portfolio-description {
+        font-size: 1.6rem;
+        dt {
+            width: 8rem;
+            padding: 2.7rem 0 2.7rem 0;
+            text-align: center;
+        }
+    }
+
+    .portfolio-description-upper {
+        dd {
+            padding-left: 5rem;
+        }
+    }
+
+    .portfolio-description-lower {
+        display: flex;
+        .portfolio-description {
+            width: 50%;
+            &:first-child {
+                border-right: 2px solid $blue1;
+            }
+        }
+        dd {
+            width: calc(100% - 8rem);
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        top: 48%;
+    }
+
+    .slick-prev {
+        left: 3%;
+    }
+
+    .slick-next {
+        right: 54%;
+    }
+
+    .slick-prev::before,
+    .slick-next::before {
+        font-size: 3.6rem;
+    }
+}
+
+@media (min-width: 993px) {
+    .portfolio-content {
+        .portfolio-title {
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .portfolio-description {
+        dt {
+            width: 13rem;
+        }
+    }
+    .portfolio-description-lower {
+        dd {
+            width: calc(100% - 13rem);
+            padding-left: 16.7%;
+            text-align: left;
+        }
+    }
+}

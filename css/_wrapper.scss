@@ -1,0 +1,11 @@
+.wrapper {
+    @media (min-width: 769px) {
+        display: flex;
+    }
+}
+
+main {
+    @media (min-width: 769px) {
+        width: calc(100vw - 8.6rem);
+    }
+}

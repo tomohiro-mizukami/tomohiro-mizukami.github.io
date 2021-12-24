@@ -1,0 +1,67 @@
+// 変数
+$white: #fff;
+$navy: #1e4055;
+$blue1: #a1c8f5;
+$blue2: #cfe3fa;
+$black1: #222;
+$black2: #4c4c4c;
+$gray1: #a8a698;
+$gray2: #ccc;
+
+
+// ベーススタイル
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $black2;
+    @media (min-width: 769px) {
+        font-size: 1.8rem;
+    }
+}
+
+a {
+    // color: ;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+h1,
+h2 {
+    font-family: 'Kaisei Opti', serif;
+    font-weight: 700;
+    color: $navy;
+}
+
+h4 {
+    font-weight: 500;
+    color: $black1;
+}
+
+p {
+    line-height: 1.6;
+}
+
+// 複数箇所で使いまわす指定
+.pc {
+    display: none;
+    @media (min-width: 769px) {
+        display: block;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
