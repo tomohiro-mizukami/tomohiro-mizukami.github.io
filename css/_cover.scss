@@ -3,8 +3,6 @@
   align-items: center;
   height: 100vh;
   padding-right: 2rem;
-  background: url("../images/cover/cover_sp.png") no-repeat bottom;
-  background-size: cover;
 }
 
 .cover h2 {
@@ -14,20 +12,17 @@
 
 .cover span {
   display: inline-block;
-  padding: .3rem 1rem .8rem 1rem;
-  background-color: $white;
-
+  // padding: .3rem 1rem .8rem 1rem;
+  // background-color: $white;
   &:first-child {
     margin-bottom: 1rem;
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .cover {
     padding-right: 0;
     padding-left: 8rem;
-    background: url("../images/cover/cover_pc.png") no-repeat center;
-    background-size: cover;
   }
 
   .cover h2 {
@@ -37,7 +32,7 @@
   .cover span {
     display: inline-block;
     padding: .3rem 1.5rem .8rem 1.5rem;
-    background-color: $white;
+    // background-color: $white;
 
     &:first-child {
       margin-bottom: 3rem;
