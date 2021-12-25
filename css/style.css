@@ -1,9 +1,9 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Condensed:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap");
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -209,8 +209,16 @@ img {
 
 h1,
 h2 {
-  font-family: "Kaisei Opti", serif;
+  font-family: "Bubblegum Sans", cursive;
+}
+
+h1 {
   font-weight: 700;
+}
+
+h2 {
+  font-weight: 400;
+  letter-spacing: 0.08em;
 }
 
 h4 {
@@ -237,23 +245,23 @@ p {
 .header h1 {
   position: fixed;
   z-index: 9999;
-  top: 4.9vh;
+  top: 4vh;
   left: 4vw;
-  font-size: 1.8rem;
+  font-size: 3.2rem;
 }
 
 @media (min-width: 576px) {
   .header h1 {
-    top: 3.7vh;
+    top: 3.5vh;
     left: 3vw;
-    font-size: 2.5rem;
+    font-size: 3.6rem;
   }
 }
 @media (min-width: 768px) {
   .header h1 {
     top: 3vh;
     left: 2vw;
-    font-size: 3.2rem;
+    font-size: 4rem;
   }
 }
 /*========= ナビゲーションのためのCSS ===============*/
@@ -425,39 +433,24 @@ p {
 
 .cover {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 100vh;
-  padding-right: 2rem;
 }
-
 .cover h2 {
-  margin: 0 auto;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
+  line-height: 2;
+  text-align: center;
 }
 
-.cover span {
-  display: inline-block;
-}
-.cover span:first-child {
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
-  .cover {
-    padding-right: 0;
-    padding-left: 8rem;
-  }
-
+@media (min-width: 576px) {
   .cover h2 {
-    font-size: 7.2rem;
+    font-size: 3.8rem;
   }
-
-  .cover span {
-    display: inline-block;
-    padding: 0.3rem 1.5rem 0.8rem 1.5rem;
-  }
-  .cover span:first-child {
-    margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .cover h2 {
+    font-size: 4.8rem;
   }
 }
 .features {
@@ -1038,53 +1031,6 @@ textarea {
   }
   .footer .fa-twitter {
     font-size: 2.4rem;
-  }
-}
-@media (min-width: 769px) {
-  .wrapper {
-    display: flex;
-  }
-}
-
-@media (min-width: 769px) {
-  main {
-    width: calc(100vw - 8.6rem);
-  }
-}
-
-aside {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 8.6rem;
-  height: 100vh;
-  border-left: 2px solid #a1c8f5;
-}
-
-#roop {
-  width: 8.6rem;
-  height: 100%;
-  background: url("../images/tomohiromizukami.com.png");
-  background-position: 0 0;
-  background-size: 100%;
-  -webkit-animation: bgroop 90s linear infinite;
-  animation: bgroop 90s linear infinite;
-}
-
-@-webkit-keyframes bgroop {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 0 2132px;
-  }
-}
-@keyframes bgroop {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 0 2132px;
   }
 }
 /*全共通*/
