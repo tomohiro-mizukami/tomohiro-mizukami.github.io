@@ -1,0 +1,167 @@
+.works {
+  /* Box-model */
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+
+  background: tomato;
+}
+
+.works h2 {
+  /* Typography */
+  text-align: center;
+}
+
+.works picture {
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.works h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.works p {
+  margin-bottom: 1rem;
+  line-height: 1.86;
+}
+
+.works ul {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  color: #848484;
+
+  li {
+    display: inline-block;
+    margin-right: 1px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// slick
+.works .carousel {
+  /* Box-model */
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.works .slick-slide {
+  /* Box-model */
+  padding: 3rem;
+  margin-left: 2.7rem;
+  margin-right: 2.7rem;
+
+  /* Visual */
+  border: .3rem solid $black1;
+  border-radius: 1rem;
+}
+
+.works {
+  .slick-arrow {
+    z-index: 1;
+  }
+}
+
+.works .slick-prev {
+  left: .8rem;
+
+  &:before {
+    font-family: FontAwesome;
+    font-size: 3.5rem;
+    opacity: 1;
+    color: $black1;
+    content: "\f100";
+  }
+}
+
+.works .slick-next {
+  right: 1.8rem;
+
+  &:before {
+    font-family: FontAwesome;
+    font-size: 3.5rem;
+    opacity: 1;
+    color: $black1;
+    content: "\f101";
+  }
+}
+
+@media (min-width: 576px) {
+  .works h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  // slick
+  .works .carousel {
+    /* Box-model */
+    max-width: 47.6rem;
+  }
+
+  .works .slick-slide {
+    /* Box-model */
+    padding: 4.5rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .works .slick-prev {
+    left: -3.5rem;
+
+    &:before {
+      font-size: 6rem;
+    }
+  }
+
+  .works .slick-next {
+    right: -.2rem;
+
+    &:before {
+      font-size: 6rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+
+  // slick
+  .works {
+    /* Box-model */
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+}
+
+@media (min-width: 992px) {
+
+  // slick
+  .works .carousel {
+    /* Box-model */
+    max-width: 95.2rem;
+  }
+
+  .works .slick-slide {
+    height: 52rem;
+  }
+
+  .works .slick-prev {
+    top: 105%;
+    left: 33rem;
+
+    &:before {
+      font-size: 8rem;
+    }
+  }
+
+  .works .slick-next {
+    top: 105%;
+    right: 38rem;
+
+    &:before {
+      font-size: 8rem;
+    }
+  }
+}

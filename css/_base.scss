@@ -19,14 +19,10 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
+  /* Typography */
+  font: 1.4rem/2.3 "TsukuGoPr5-M", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  letter-spacing: .08em;
   color: $black1;
-
-  @media (min-width: 769px) {
-    font-size: 1.8rem;
-  }
 }
 
 a {
@@ -39,23 +35,24 @@ img {
   vertical-align: bottom;
 }
 
-h1,
-h2,
-#g-nav li a {
-  font-family: 'Bubblegum Sans', cursive;
+h2 {
+  font-size: 3rem;
+  margin: 0 0 5rem 0;
 }
 
-h2,
-#g-nav li a {
-  letter-spacing: .08em;
+@media (min-width: 768px) {
+  h2 {
+    margin: 0 0 7rem 0;
+  }
 }
 
-h4 {
-  font-weight: 500;
+h3 {
+  font-family: "TsukuGoPro-E", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  line-height: 1.75;
 }
 
-p {
-  line-height: 1.6;
+ul {
+  list-style: none;
 }
 
 // 複数箇所で使いまわす指定
@@ -69,4 +66,9 @@ p {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+// Animate.css
+.animate__animated {
+  opacity: 0;
 }
