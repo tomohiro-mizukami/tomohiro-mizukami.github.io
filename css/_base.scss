@@ -1,10 +1,6 @@
 // 変数
 $white: #fff;
-$navy: #1e4055;
-$blue1: #a1c8f5;
-$blue2: #cfe3fa;
 $black1: #000;
-$black2: #333;
 $gray1: #a8a698;
 $gray2: #ccc;
 
@@ -20,9 +16,9 @@ html {
 
 body {
   /* Typography */
-  font: 1.4rem/2.3 "TsukuGoPr5-M", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
-  letter-spacing: .08em;
+  font: 1.8rem/2 YuGothic, "Original Yu Gothic", Meiryo, sans-serif;
   color: $black1;
+  text-align: center;
 }
 
 a {
@@ -33,17 +29,6 @@ a {
 img {
   max-width: 100%;
   vertical-align: bottom;
-}
-
-h2 {
-  font-size: 3rem;
-  margin: 0 0 5rem 0;
-}
-
-@media (min-width: 768px) {
-  h2 {
-    margin: 0 0 7rem 0;
-  }
 }
 
 h3 {
@@ -71,4 +56,17 @@ ul {
 // Animate.css
 .animate__animated {
   opacity: 0;
+}
+
+
+// Section's Header Area
+h2 {
+  font-size: 3rem;
+  margin: 0 0 5rem 0;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    margin: 0 0 7rem 0;
+  }
 }

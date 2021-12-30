@@ -186,9 +186,9 @@ html {
 
 body {
   /* Typography */
-  font: 1.4rem/2.3 "TsukuGoPr5-M", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
-  letter-spacing: 0.08em;
+  font: 1.8rem/2 YuGothic, "Original Yu Gothic", Meiryo, sans-serif;
   color: #000;
+  text-align: center;
 }
 
 a {
@@ -201,16 +201,6 @@ img {
   vertical-align: bottom;
 }
 
-h2 {
-  font-size: 3rem;
-  margin: 0 0 5rem 0;
-}
-
-@media (min-width: 768px) {
-  h2 {
-    margin: 0 0 7rem 0;
-  }
-}
 h3 {
   font-family: "TsukuGoPro-E", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
   line-height: 1.75;
@@ -237,31 +227,41 @@ ul {
   opacity: 0;
 }
 
+h2 {
+  font-size: 3rem;
+  margin: 0 0 5rem 0;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    margin: 0 0 7rem 0;
+  }
+}
 .header h1 {
   /* Positioning */
   position: fixed;
   top: 4vh;
   left: 4vw;
   z-index: 9999;
+  /* Box-model */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
   /* Typography */
   font-size: 3.2rem;
-  letter-spacing: -0.0625em;
+  line-height: 1;
 }
 
 @media (min-width: 576px) {
   .header h1 {
-    /* Positioning */
-    top: 3.5vh;
-    left: 3vw;
     /* Typography */
     font-size: 3.6rem;
   }
 }
 @media (min-width: 768px) {
   .header h1 {
-    /* Positioning */
-    top: 3vh;
-    left: 2vw;
     /* Typography */
     font-size: 4rem;
   }
@@ -370,20 +370,27 @@ ul {
 }
 
 #g-nav li a {
-  color: #333;
+  color: #000;
   text-decoration: none;
-  padding: 25px;
+  margin: 2rem;
   display: block;
   text-transform: uppercase;
+  font-weight: bold;
   /*メニューを押しやすいフォントサイズに*/
   font-size: 2.5rem;
 }
 
+@media (min-width: 768px) {
+  #g-nav li a {
+    margin: 2.5rem;
+    font-size: 3rem;
+  }
+}
 /*========= ボタンのためのCSS ===============*/
 .openbtn {
   position: fixed;
-  top: 2vh;
-  right: 2vw;
+  top: 4vh;
+  right: 4vw;
   z-index: 9999;
   /*ボタンを最前面に*/
   cursor: pointer;
@@ -399,7 +406,7 @@ ul {
   left: 14px;
   height: 3px;
   border-radius: 2px;
-  background-color: #333;
+  background-color: #000;
   width: 45%;
 }
 
@@ -440,24 +447,35 @@ ul {
   align-items: center;
   height: 100vh;
 }
+
+.cover .heading-block {
+  line-height: 1;
+}
+
 .cover h2 {
   /* Typography */
-  font-size: 2.8rem;
-  line-height: 2;
-  color: #000;
-  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 3.5vh;
+}
+.cover h2 span {
+  font-size: 1.8rem;
 }
 
 @media (min-width: 576px) {
-  .cover h2 {
-    /* Typography */
-    font-size: 4rem;
+  .cover h2 br {
+    /* Box-model */
+    display: none;
   }
 }
 @media (min-width: 768px) {
   .cover h2 {
     /* Typography */
-    font-size: 4.8rem;
+    font-size: 6.5vw;
+  }
+
+  .cover p {
+    /* Typography */
+    font-size: 2.5vw;
   }
 }
 .feature {

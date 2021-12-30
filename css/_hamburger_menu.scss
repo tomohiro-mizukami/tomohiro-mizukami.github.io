@@ -107,24 +107,29 @@
 }
 
 #g-nav li a {
-  color: $black2;
+  color: $black1;
   text-decoration: none;
-  padding: 25px;
+  margin: 2rem;
   display: block;
   text-transform: uppercase;
-  // letter-spacing: 0.1em;
-  // font-weight: bold;
-  
+  font-weight: bold;
+
   /*メニューを押しやすいフォントサイズに*/
   font-size: 2.5rem;
 }
 
+@media (min-width: 768px) {
+  #g-nav li a {
+    margin: 2.5rem;
+    font-size: 3rem;
+  }
+}
 
 /*========= ボタンのためのCSS ===============*/
 .openbtn {
   position: fixed;
-  top: 2vh;
-  right: 2vw;
+  top: 4vh;
+  right: 4vw;
   z-index: 9999;
   /*ボタンを最前面に*/
   cursor: pointer;
@@ -140,7 +145,7 @@
   left: 14px;
   height: 3px;
   border-radius: 2px;
-  background-color: $black2;
+  background-color: $black1;
   width: 45%;
 }
 
