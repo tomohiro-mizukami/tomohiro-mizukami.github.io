@@ -15,19 +15,11 @@ $("#g-nav a, #header a").click(() => { //ナビゲーションのリンクがク
 // slick
 $(document).ready(function() {
   $('.carousel').slick({
-    autoplay: false, // 自動再生
-    // autoplaySpeed: 5000, // 自動再生の速さ、単位はミリ秒
-    arrows: true, // 左右のナビゲーションを無効にする
-    dots: false, // スライド下にドットを表示する
+    // autoplay: true, // 自動再生
+    autoplaySpeed: 5000, // 自動再生の速さ、単位はミリ秒
+    arrows: false, // 左右のナビゲーションを無効にする
+    dots: true, // スライド下にドットを表示する
     fade: false, // スライドの切り替えをフェードにする 
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [{
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 1,
-      }
-    }, ]
   });
 });
 

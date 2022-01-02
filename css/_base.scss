@@ -16,7 +16,7 @@ html {
 
 body {
   /* Typography */
-  font: 1.8rem/2 YuGothic, "Original Yu Gothic", Meiryo, sans-serif;
+  font: 1.8rem/1 YuGothic, "Original Yu Gothic", Meiryo, sans-serif;
   color: $black1;
   text-align: center;
 }
@@ -31,21 +31,27 @@ img {
   vertical-align: bottom;
 }
 
-h3 {
-  font-family: "TsukuGoPro-E", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
-  line-height: 1.75;
-}
-
 ul {
   list-style: none;
 }
 
 // 複数箇所で使いまわす指定
-.pc {
-  display: none;
+.inner {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
 
-  @media (min-width: 769px) {
-    display: block;
+@media (min-width: 576px) {
+  .inner {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .inner {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 }
 
@@ -58,15 +64,28 @@ ul {
   opacity: 0;
 }
 
-
 // Section's Header Area
 h2 {
-  font-size: 3rem;
-  margin: 0 0 5rem 0;
+  /* Box-model */
+  margin-bottom: 4rem;
+
+  /* Typography */
+  font-size: 4rem;
+}
+
+@media (min-width: 576px) {
+  h2 {
+    /* Box-model */
+    margin-bottom: 6rem;
+  }
 }
 
 @media (min-width: 768px) {
   h2 {
-    margin: 0 0 7rem 0;
+    /* Box-model */
+    margin-bottom: 8rem;
+
+    /* Typography */
+    font-size: 5rem;
   }
 }

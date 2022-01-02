@@ -1,38 +1,21 @@
 /* contact */
-
-#contact {
-  margin: 0 0 100px 0;
+.contact .inner {
+  padding-bottom: 12rem;
 }
 
-#contact h2 {
-  text-align: center;
-  margin: 0 0 100px 0;
-}
-
-@media screen and (max-width:550px) {
-  #contact h2 {
-    margin: 0 0 50px 0;
-  }
-}
-
-#contact form {
+.contact form {
   width: 90%;
   margin: 0 auto;
 }
 
-#contact .form-list {
+.form-list {
   width: 100%;
   max-width: 40rem;
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  #contact .form-list {
-    max-width: 60rem;
-  }
-}
 
-#contact .form-list li {
+.form-list li {
   margin-bottom: 3rem;
 
   &:last-child {
@@ -40,8 +23,8 @@
   }
 }
 
-#contact input,
-textarea {
+.form-list input,
+.form-list textarea {
   margin: 0;
   padding: 0;
   border: none;
@@ -53,9 +36,9 @@ textarea {
   /* Specify textarea resizability */
 }
 
-#contact .form-list input[type='text'],
-#contact .form-list input[type='email'],
-#contact .form-list textarea {
+.form-list input[type='text'],
+.form-list input[type='email'],
+.form-list textarea {
   width: 100%;
   border: 1px solid #666;
   background: #fff;
@@ -65,12 +48,16 @@ textarea {
   /* appearance:none; */
 }
 
-#contact .form-list input[type='text'],
-input[type='email'] {
+.form-list input[type='text'],
+.form-list input[type='email'] {
   height: 50px;
 }
 
-#contact {
+.form-list textarea {
+  height: 200px;
+}
+
+.form-list {
   ::-webkit-input-placeholder {
     /* Edge */
     font-size: 1.4rem;
@@ -81,27 +68,42 @@ input[type='email'] {
   }
 }
 
-
-#contact .submit-btn {
+.submit-btn {
   width: 152px;
   margin: 0 auto;
 }
 
-#contact input[type='submit'] {
+.submit-btn input[type='submit'] {
   border: 2px solid #333;
+  background-color: $white;
   color: #333;
-  text-align: center;
   padding: 1rem 2rem 1rem 2rem;
   width: 152px;
   margin: 0 auto;
   transition: all .3s;
 }
 
-#contact input[type='submit']:hover {
-  background: #333;
+.submit-btn input[type='submit']:hover {
+  background-color: #333;
   color: #fff;
 }
 
-#contact .form-list textarea {
-  height: 200px;
+@media (min-width: 576px) {
+  .contact .inner {
+    padding-bottom: 14rem;
+  }
+
+  .form-list li:last-child {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact .inner {
+    padding-bottom: 16rem;
+  }
+
+  .form-list {
+    max-width: 60rem;
+  }
 }

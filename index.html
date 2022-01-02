@@ -31,7 +31,7 @@
       <!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
       <ul>
         <li><a href="#header">Top</a></li>
-        <li><a href="#feature">Feature</a></li>
+        <li><a href="#concept">concept</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#works">Works</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -40,41 +40,53 @@
   </nav>
   <div class="circle-bg"></div>
 
-  <main class="main-area">
-    <section class="cover">
-      <div class="heading-block animate__animated animate__backInUp">
-        <h2>Tomohiro<br>Mizukami</h2>
-        <p>Freelance Web Developer</p>
-      </div>
-    </section>
+  <section class="top-main">
+    <div class="heading-block animate__animated animate__backInUp">
+      <h2>Tomohiro<br>Mizukami</h2>
+      <p>Freelance Web Developer</p>
+    </div>
+  </section>
 
-    <section class="feature" id="feature">
+  <main class="main-area">
+    <section class="concept" id="concept">
       <div class="inner">
-        <h2 class="uppercase animate__animated fadeInUp">Feature</h2>
-        <div class="feature-area">
+        <h2 class="animate__animated fadeInUp">Concept</h2>
+        <div class="concept-area">
           <!-- 1 -->
           <section>
-            <div class="feature-img animate__animated zoomIn">
+            <div class="concept-img animate__animated zoomIn">
               <i class="fas fa-bullseye"></i>
             </div>
-            <h3 class="animate__animated fadeInUp">Easy</h3>
-            <p class="animate__animated fadeInUp">「どんなデザインにしようか」<br>わからなくても大丈夫。<br>一緒に作りましょう。</p>
+            <h3 class="uppercase animate__animated fadeInUp">Easy</h3>
+            <p class="animate__animated fadeInUp">
+              「どんなデザインか?」<br>
+              わからなくても大丈夫。<br>
+              一緒に作りましょう。
+            </p>
           </section>
           <!-- 2 -->
           <section>
-            <div class="feature-img animate__animated zoomIn">
+            <div class="concept-img animate__animated zoomIn">
               <i class="far fa-smile-wink"></i>
             </div>
-            <h3 class="animate__animated fadeInUp">Smile</h3>
-            <p class="animate__animated fadeInUp">いつも笑顔で丁寧、迅速な<br>コミュニケーションを<br>心掛けております。</p>
+            <h3 class="uppercase animate__animated fadeInUp">Smile</h3>
+            <p class="animate__animated fadeInUp">
+              いつも笑顔で丁寧な<br>
+              コミュニケーションを<br>
+              心掛けております。
+            </p>
           </section>
           <!-- 3 -->
           <section>
-            <div class="feature-img animate__animated zoomIn">
-              <i class="fas fa-yen-sign"></i>
+            <div class="concept-img animate__animated zoomIn">
+              <i class="fas fa-mobile-alt"></i>
             </div>
-            <h3 class="animate__animated fadeInUp">Price</h3>
-            <p class="animate__animated fadeInUp">シンプルな価格。<br>わからない料金は発生しません。<br>ご安心ください。</p>
+            <h3 class="uppercase animate__animated fadeInUp">Simple</h3>
+            <p class="animate__animated fadeInUp">
+              シンプルなデザイン。<br>
+              読みやすく、<br>
+              モバイルフレンドリー。
+            </p>
           </section>
         </div>
       </div>
@@ -87,7 +99,7 @@
           <img src="images/profile.jpg" alt="水上智紘の顔写真">
         </figure>
         <p class="animate__animated fadeInUp">インドのシリコンバレーで<br>
-          虫に刺されながら😢<br>
+          虫に刺されながら<br>
           Webサイト制作を学びました。<br>
         </P>
         <p class="animate__animated fadeInUp">
@@ -106,18 +118,18 @@
 
     <section class="works" id="works">
       <div class="inner">
-        <h2 class="uppercase animate__animated fadeInUp">Works</h2>
+        <h2 class="animate__animated fadeInUp">Works</h2>
         <div class="works-area carousel animate__animated fadeInUp">
 
           <section>
             <a href="https://tomohiromizukami.com/greenhouse/" target=”_blank”>
               <picture>
-                <source media="(min-width:576px)" srcset="images/carousel/pc.png">
-                <img src="images/carousel/sp.png" alt="コーポレートサイト">
+                <source media="(min-width:576px)" srcset="images/carousel/corporate_576.png">
+                <img src="images/carousel/corporate.png" alt="コーポレートサイト">
               </picture>
             </a>
             <h3>コーポレートサイト</h3>
-            <p>ポートフォリオに載せるために動画を見ながら作成しました。Adobe XDのデザインカンプからコーディングし、ワードプレス化しました。</p>
+            <p>ポートフォリオに載せるために作成しました。Adobe XDのデザインカンプからコーディングし、ワードプレス化しました。</p>
             <ul>
               <li>#WordPress</li>
               <li>#PHP</li>
@@ -128,61 +140,43 @@
           </section>
 
           <section>
-            <picture>
-              <source media="(min-width:576px)" srcset="images/carousel/pc.png">
-              <img src="images/carousel/sp.png" alt="コーポレートサイト">
-            </picture>
+            <a href="https://tomohiromizukami.com/sunsetclouds/" target=”_blank”>
+              <picture>
+                <source media="(min-width:576px)" srcset="images/carousel/blog_576.png">
+                <img src="images/carousel/blog.png" alt="コーポレートサイト">
+              </picture>
+            </a>
             <h3>ブログサイト</h3>
-            <p>ポートフォリオに載せるために動画を見ながら作成しました。ワードプレス化しました。</p>
+            <p>英語表記のシンプルなサイトをポートフォリオに載せるために作成しました。既存サイトをワードプレス化しました。</p>
             <ul>
-              <li>#WordPress</li>
-              <li>#PHP</li>
-              <li>#slick</li>
-              <li>#jQuery</li>
-              <li>#Sass</li>
               <li>#English</li>
+              <li>#WordPress</li>
             </ul>
           </section>
 
-          <section>
-            <picture>
-              <source media="(min-width:576px)" srcset="images/carousel/pc.png">
-              <img src="images/carousel/sp.png" alt="コーポレートサイト">
-            </picture>
-            <h3>ショップサイト</h3>
-            <p>ポートフォリオに載せるために動画を見ながら作成しました。Adobe XDのデザインカンプからコーディングし、ワードプレス化しました。</p>
-            <ul>
-              <li>#WordPress</li>
-              <li>#PHP</li>
-              <li>#slick</li>
-              <li>#jQuery</li>
-              <li>#Sass</li>
-              <li>#HTML</li>
-              <li>#CSS</li>
-              <li>#JavaScript</li>
-            </ul>
-          </section>
         </div>
       </div>
     </section>
 
     <section class="contact" id="contact">
-      <h2 class="uppercase animate__animated fadeInUp">Contact</h2>
-      <form method="post" action enctype="multipart/form-data">
-        <ul class="form-list animate__animated fadeInUp">
-          <li><input type="text" name="Name" placeholder="お名前"></li>
-          <li><input type="email" name="E-mail" placeholder="メールアドレス"></li>
-          <li><textarea name="Message" placeholder="メッセージ"></textarea></li>
-        </ul>
-        <div class="submit-btn animate__animated fadeInUp">
-          <input type="submit" name="Submit" value="送信">
-        </div>
-      </form>
+      <div class="inner">
+        <h2 class="animate__animated fadeInUp">Contact</h2>
+        <form method="post" action enctype="multipart/form-data">
+          <ul class="form-list animate__animated fadeInUp">
+            <li><input type="text" name="Name" placeholder="お名前"></li>
+            <li><input type="email" name="E-mail" placeholder="メールアドレス"></li>
+            <li><textarea name="Message" placeholder="メッセージ"></textarea></li>
+          </ul>
+          <div class="submit-btn animate__animated fadeInUp">
+            <input type="submit" name="Submit" value="送信">
+          </div>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="footer uppercase">
-    <small>© Tomohiro Mizukami</small>
+  <footer class="footer">
+    <small class="uppercase">© Tomohiro Mizukami</small>
   </footer>
 
   <!-- jQuery -->

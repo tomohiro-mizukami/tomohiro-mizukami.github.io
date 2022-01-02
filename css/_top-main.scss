@@ -1,4 +1,4 @@
-.cover {
+.top-main {
   /* Box-model */
   display: flex;
   justify-content: center;
@@ -6,34 +6,28 @@
   height: 100vh;
 }
 
-.cover .heading-block {
-  line-height: 1;
-}
-
-.cover h2 {
-  /* Typography */
-  font-size: 5rem;
+.heading-block h2 {
+  /* Box-model */
   margin-bottom: 3.5vh;
 
-  span {
-    font-size: 1.8rem;
-  }
+  /* Typography */
+  font-size: 5rem;
 }
 
 @media (min-width: 576px) {
-  .cover h2 br {
+  .heading-block h2 br {
     /* Box-model */
     display: none;
   }
 }
 
 @media (min-width: 768px) {
-  .cover h2 {
+  .heading-block h2 {
     /* Typography */
     font-size: 6.5vw;
   }
 
-  .cover p {
+  .heading-block p {
     /* Typography */
     font-size: 2.5vw;
   }
