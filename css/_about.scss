@@ -37,7 +37,7 @@
 @media (min-width: 576px) {
   .about h2 {
     /* Typography */
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .about-img {
@@ -55,7 +55,7 @@
     margin-bottom: 3rem;
 
     /* Typography */
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -83,7 +83,11 @@
   }
 
   .about p {
+    /* Box-model */
+    margin-bottom: 3rem;
+    
     /* Typography */
+    font-size: 2rem;
     text-align: right;
   }
 }

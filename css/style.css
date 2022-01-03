@@ -191,6 +191,12 @@ body {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  body {
+    /* Typography */
+    font-size: 1.6rem;
+  }
+}
 a {
   color: #000;
   text-decoration: none;
@@ -216,16 +222,8 @@ h2 {
   font-size: 3rem;
 }
 
-@media (min-width: 576px) {
-  h2 {
-    /* Box-model */
-    margin-bottom: 6rem;
-  }
-}
 @media (min-width: 768px) {
   h2 {
-    /* Box-model */
-    margin-bottom: 8rem;
     /* Typography */
     font-size: 5rem;
   }
@@ -235,7 +233,7 @@ h2 {
   position: fixed;
   top: 2vh;
   left: 2vw;
-  z-index: 9999;
+  z-index: 998;
   /* Box-model */
   display: flex;
   justify-content: center;
@@ -375,8 +373,8 @@ h2 {
 
 @media (min-width: 768px) {
   #g-nav li a {
-    margin: 4rem;
-    font-size: 4rem;
+    margin: 4.5rem;
+    font-size: 3.5rem;
   }
 }
 /*========= ボタンのためのCSS ===============*/
@@ -435,7 +433,7 @@ h2 {
 
 .hero h2 {
   /* Box-model */
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   /* Typography */
   font-size: 5rem;
 }
@@ -457,12 +455,6 @@ h2 {
     font-size: 2vw;
   }
 }
-.concept {
-  /* Box-model */
-  display: flex;
-  justify-content: center;
-}
-
 .concept-area section:nth-of-type(1) {
   /* Box-model */
   margin-bottom: 4rem;
@@ -494,6 +486,11 @@ h2 {
 }
 
 @media (min-width: 576px) {
+  .concept h2 {
+    /* Box-model */
+    margin-bottom: 6rem;
+  }
+
   .concept-area {
     /* Box-model */
     display: flex;
@@ -504,19 +501,53 @@ h2 {
   .concept-area section {
     /* Box-model */
     width: 45%;
-    margin-bottom: 8rem;
+  }
+
+  .concept-area section:nth-of-type(1) {
+    /* Box-model */
+    margin-bottom: 6rem;
+  }
+  .concept-area section:nth-of-type(2) {
+    /* Box-model */
+    display: block;
+    margin-bottom: 6rem;
   }
 }
 @media (min-width: 768px) {
+  .concept h2 {
+    margin-bottom: 10rem;
+  }
+
   .concept-area {
     /* Box-model */
     justify-content: space-between;
     max-width: 108rem;
+    margin: 0 auto;
   }
   .concept-area section {
     /* Box-model */
     width: 30%;
-    margin: 0;
+    margin-bottom: 0;
+  }
+
+  .concept-area .concept-img {
+    /* Box-model */
+    margin-bottom: 2.5rem;
+  }
+  .concept-area .concept-img i {
+    /* Typography */
+    font-size: 5rem;
+  }
+
+  .concept-area h3 {
+    /* Box-model */
+    margin-bottom: 2rem;
+    /* Typography */
+    font-size: 2.5rem;
+  }
+
+  .concept-area p {
+    line-height: 1.4;
   }
 }
 .about h2 {
@@ -553,7 +584,7 @@ h2 {
 @media (min-width: 576px) {
   .about h2 {
     /* Typography */
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .about-img {
@@ -569,7 +600,7 @@ h2 {
     /* Box-model */
     margin-bottom: 3rem;
     /* Typography */
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 768px) {
@@ -595,7 +626,10 @@ h2 {
   }
 
   .about p {
+    /* Box-model */
+    margin-bottom: 3rem;
     /* Typography */
+    font-size: 2rem;
     text-align: right;
   }
 }
@@ -647,25 +681,30 @@ h2 {
 }
 
 @media (min-width: 576px) {
+  .works h2 {
+    /* Box-model */
+    margin-bottom: 2.5rem;
+  }
+
   .works picture {
     /* Box-model */
-    margin-bottom: 5rem;
+    margin-bottom: 1.5rem;
   }
 
   .works h3 {
     /* Typography */
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .works p {
     /* Box-model */
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     /* Typography */
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .works ul {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .works .carousel {
@@ -674,32 +713,30 @@ h2 {
   }
 }
 @media (min-width: 768px) {
+  .works h2 {
+    margin-bottom: 1.5rem;
+  }
+
   .works picture {
     /* Box-model */
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   .works h3 {
     /* Box-model */
     margin-bottom: 2rem;
     /* Typography */
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .works p {
     /* Box-model */
-    margin-bottom: 3rem;
-    /* Typography */
-    font-size: 2.2rem;
-  }
-
-  .works ul {
-    font-size: 1.8rem;
+    margin-bottom: 2rem;
   }
 
   .works .carousel {
     /* Box-model */
-    max-width: 70rem;
+    max-width: 60rem;
   }
 }
 /* contact */
@@ -780,19 +817,15 @@ h2 {
 }
 
 @media (min-width: 576px) {
-  .contact .inner {
-    padding-bottom: 14rem;
+  .contact h2 {
+    margin-bottom: 4rem;
   }
 
-  .form-list li:last-child {
+  .form-list li {
     margin-bottom: 3rem;
   }
 }
 @media (min-width: 768px) {
-  .contact .inner {
-    padding-bottom: 16rem;
-  }
-
   .form-list {
     max-width: 60rem;
   }

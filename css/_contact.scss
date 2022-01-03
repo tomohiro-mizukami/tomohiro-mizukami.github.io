@@ -81,20 +81,16 @@
 }
 
 @media (min-width: 576px) {
-  .contact .inner {
-    padding-bottom: 14rem;
+  .contact h2 {
+    margin-bottom: 4rem;
   }
 
-  .form-list li:last-child {
+  .form-list li {
     margin-bottom: 3rem;
   }
 }
 
 @media (min-width: 768px) {
-  .contact .inner {
-    padding-bottom: 16rem;
-  }
-
   .form-list {
     max-width: 60rem;
   }

@@ -21,6 +21,13 @@ body {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  body {
+    /* Typography */
+    font-size: 1.6rem;
+  }
+}
+
 a {
   color: $black1;
   text-decoration: none;
@@ -54,18 +61,8 @@ h2 {
   font-size: 3rem;
 }
 
-@media (min-width: 576px) {
-  h2 {
-    /* Box-model */
-    margin-bottom: 6rem;
-  }
-}
-
 @media (min-width: 768px) {
   h2 {
-    /* Box-model */
-    margin-bottom: 8rem;
-
     /* Typography */
     font-size: 5rem;
   }
