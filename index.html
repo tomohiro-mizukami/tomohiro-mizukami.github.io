@@ -5,14 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tomohiro Mizukami|Portfolio</title>
-  <meta name="description" content=フリーランスWebデザイナー水上智紘のポートフォリオサイト>
-  <!-- CSS -->
+  <meta name="description" content=フリーランスWebディベロッパー水上智紘のポートフォリオサイト>
+
+  <!-- Normalize.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="./css/style.css">
+  <!-- fullPage.js -->
+  <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/e1561f809d.js" crossorigin="anonymous"></script>
 </head>
@@ -21,7 +26,7 @@
 
   <header class="header" id="header">
     <h1 class="animate__animated animate__fadeInDown">
-      <a href="#">T</a>
+      <a class="back-to-top" href="#">上</a>
     </h1>
   </header>
 
@@ -40,31 +45,22 @@
   </nav>
   <div class="circle-bg"></div>
 
-  <section class="top-main">
-    <div class="heading-block animate__animated animate__backInUp">
-      <h2>Tomohiro<br>Mizukami</h2>
-      <p>Freelance Web Developer</p>
-    </div>
-  </section>
+  <main class="main-area" id="fullpage">
 
-  <main class="main-area">
-    <section class="concept" id="concept">
+    <!--Hero-->
+    <section class="top-main section">
+      <div class="heading-block animate__animated animate__backInUp">
+        <h2>Tomohiro<br>Mizukami</h2>
+        <p class="uppercase">Freelance Web Developer</p>
+      </div>
+    </section>
+
+    <!--Concept-->
+    <section class="concept section" id="concept">
       <div class="inner">
-        <h2 class="animate__animated fadeInUp">Concept</h2>
+        <h2 class="uppercase animate__animated fadeInUp">Concept</h2>
         <div class="concept-area">
           <!-- 1 -->
-          <section>
-            <div class="concept-img animate__animated zoomIn">
-              <i class="fas fa-bullseye"></i>
-            </div>
-            <h3 class="uppercase animate__animated fadeInUp">Easy</h3>
-            <p class="animate__animated fadeInUp">
-              「どんなデザインか?」<br>
-              わからなくても大丈夫。<br>
-              一緒に作りましょう。
-            </p>
-          </section>
-          <!-- 2 -->
           <section>
             <div class="concept-img animate__animated zoomIn">
               <i class="far fa-smile-wink"></i>
@@ -74,6 +70,18 @@
               いつも笑顔で丁寧な<br>
               コミュニケーションを<br>
               心掛けております。
+            </p>
+          </section>
+          <!-- 2 -->
+          <section>
+            <div class="concept-img animate__animated zoomIn">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3 class="uppercase animate__animated fadeInUp">Easy</h3>
+            <p class="animate__animated fadeInUp">
+              「どんなデザインか?」<br>
+              わからなくても大丈夫。<br>
+              一緒に作りましょう。
             </p>
           </section>
           <!-- 3 -->
@@ -92,33 +100,39 @@
       </div>
     </section>
 
-    <section class="about" id="about">
+    <!--About-->
+    <section class="about section" id="about">
       <div class="inner">
-        <h2 class="animate__animated fadeInUp">水上 智紘</h2>
-        <figure class="about-img animate__animated zoomIn">
-          <img src="images/profile.jpg" alt="水上智紘の顔写真">
-        </figure>
-        <p class="animate__animated fadeInUp">インドのシリコンバレーで<br>
-          虫に刺されながら<br>
-          Webサイト制作を学びました。<br>
-        </P>
-        <p class="animate__animated fadeInUp">
-          「真面目すぎる」と<br>
-          よく言われますが、<br>
-          あなたの問題解決には<br>
-          柔軟に対応していきます。
-        </p>
-        <p class="animate__animated fadeInUp">
-          デザインから<br>
-          Webサイトのワードプレス化まで<br>
-          丸ごとおまかせください。
-        </p>
+        <div class="about-img-area">
+          <h2 class="animate__animated fadeInUp">水上 智紘</h2>
+          <figure class="about-img animate__animated zoomIn">
+            <img src="images/profile.jpg" alt="水上智紘の顔写真">
+          </figure>
+        </div>
+        <div class="about-sentence-area">
+          <p class="animate__animated fadeInUp">インドのシリコンバレーで<br>
+            虫に刺されながら<br>
+            Webサイト制作を学びました。<br>
+          </P>
+          <p class="animate__animated fadeInUp">
+            「真面目すぎる」と<br>
+            よく言われますが、<br>
+            あなたの問題解決には<br>
+            柔軟に対応していきます。
+          </p>
+          <p class="animate__animated fadeInUp">
+            デザインから<br>
+            Webサイトのワードプレス化まで<br>
+            丸ごとおまかせください。
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="works" id="works">
+    <!--Works-->
+    <section class="works section" id="works">
       <div class="inner">
-        <h2 class="animate__animated fadeInUp">Works</h2>
+        <h2 class="uppercase animate__animated fadeInUp">Works</h2>
         <div class="works-area carousel animate__animated fadeInUp">
 
           <section>
@@ -147,7 +161,7 @@
               </picture>
             </a>
             <h3>ブログサイト</h3>
-            <p>英語表記のシンプルなサイトをポートフォリオに載せるために作成しました。既存サイトをワードプレス化しました。</p>
+            <p>英語表記のシンプルなサイトをポートフォリオ用に作成しました。既存サイトをワードプレス化しました。</p>
             <ul>
               <li>#English</li>
               <li>#WordPress</li>
@@ -158,9 +172,10 @@
       </div>
     </section>
 
-    <section class="contact" id="contact">
+    <!--Contact-->
+    <section class="contact section" id="contact">
       <div class="inner">
-        <h2 class="animate__animated fadeInUp">Contact</h2>
+        <h2 class="uppercase animate__animated fadeInUp">Contact</h2>
         <form method="post" action enctype="multipart/form-data">
           <ul class="form-list animate__animated fadeInUp">
             <li><input type="text" name="Name" placeholder="お名前"></li>
@@ -173,16 +188,15 @@
         </form>
       </div>
     </section>
-  </main>
 
-  <footer class="footer">
-    <small class="uppercase">© Tomohiro Mizukami</small>
-  </footer>
+  </main>
 
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- Waypoints -->
   <script src="js/jquery.waypoints.min.js"></script>
+  <!-- fullPage.js -->
+  <script type="text/javascript" src="js/jquery.fullPage.js"></script>
   <!-- slick -->
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <!-- JS -->

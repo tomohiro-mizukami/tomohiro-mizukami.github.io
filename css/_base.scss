@@ -36,32 +36,13 @@ ul {
 }
 
 // 複数箇所で使いまわす指定
-.inner {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-@media (min-width: 576px) {
-  .inner {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .inner {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-}
-
 .uppercase {
   text-transform: uppercase;
 }
 
 // Animate.css
 .animate__animated {
-  opacity: 0;
+  // opacity: 0;
 }
 
 // Section's Header Area
@@ -70,7 +51,7 @@ h2 {
   margin-bottom: 4rem;
 
   /* Typography */
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 @media (min-width: 576px) {

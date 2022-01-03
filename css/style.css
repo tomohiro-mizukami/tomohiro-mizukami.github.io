@@ -205,36 +205,15 @@ ul {
   list-style: none;
 }
 
-.inner {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-@media (min-width: 576px) {
-  .inner {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-}
-@media (min-width: 768px) {
-  .inner {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-}
 .uppercase {
   text-transform: uppercase;
-}
-
-.animate__animated {
-  opacity: 0;
 }
 
 h2 {
   /* Box-model */
   margin-bottom: 4rem;
   /* Typography */
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 @media (min-width: 576px) {
@@ -254,8 +233,8 @@ h2 {
 .header h1 {
   /* Positioning */
   position: fixed;
-  top: 4vh;
-  left: 4vw;
+  top: 2vh;
+  left: 2vw;
   z-index: 9999;
   /* Box-model */
   display: flex;
@@ -264,7 +243,7 @@ h2 {
   width: 5rem;
   height: 5rem;
   /* Typography */
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   line-height: 1;
 }
 
@@ -386,12 +365,12 @@ h2 {
 #g-nav li a {
   color: #000;
   text-decoration: none;
-  margin: 3rem;
+  margin: 4rem;
   display: block;
   text-transform: uppercase;
   font-weight: bold;
   /*メニューを押しやすいフォントサイズに*/
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -403,8 +382,8 @@ h2 {
 /*========= ボタンのためのCSS ===============*/
 .openbtn {
   position: fixed;
-  top: 4vh;
-  right: 4vw;
+  top: 2vh;
+  right: 2vw;
   z-index: 9999;
   /*ボタンを最前面に*/
   cursor: pointer;
@@ -454,14 +433,6 @@ h2 {
   width: 30%;
 }
 
-.top-main {
-  /* Box-model */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 .heading-block h2 {
   /* Box-model */
   margin-bottom: 3.5vh;
@@ -483,7 +454,7 @@ h2 {
 
   .heading-block p {
     /* Typography */
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
 }
 .concept {
@@ -492,13 +463,14 @@ h2 {
   justify-content: center;
 }
 
-.concept-area section {
+.concept-area section:nth-of-type(1) {
   /* Box-model */
   margin-bottom: 5rem;
 }
-.concept-area section:last-child {
+
+.concept-area section:nth-of-type(2) {
   /* Box-model */
-  margin-bottom: 0;
+  display: none;
 }
 
 .concept-area .concept-img {
@@ -547,19 +519,16 @@ h2 {
     margin: 0;
   }
 }
-.about {
-  /* Box-model */
-  display: flex;
-  justify-content: center;
-}
-
 .about h2 {
-  margin-bottom: 2rem;
+  /* Box-model */
+  margin-bottom: 1.5rem;
+  /* Typography */
+  font-size: 4rem;
 }
 
 .about-img {
   /* Box-model */
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
 }
 .about-img img {
   /* Box-model */
@@ -582,22 +551,14 @@ h2 {
 }
 
 @media (min-width: 576px) {
-  .about .inner {
-    /* Box-model */
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-
   .about h2 {
-    /* Box-model */
-    margin-bottom: 3rem;
     /* Typography */
     font-size: 5rem;
   }
 
   .about-img {
     /* Box-model */
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
   .about-img img {
     /* Box-model */
@@ -614,29 +575,28 @@ h2 {
 @media (min-width: 768px) {
   .about .inner {
     /* Box-model */
-    padding-top: 15rem;
-    padding-bottom: 15rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 108rem;
+    margin: 0 auto;
   }
 
   .about h2 {
+    /* Typography */
+    font-size: 7rem;
     /* Box-model */
     margin-bottom: 3rem;
-    /* Typography */
-    font-size: 6rem;
   }
 
-  .about-img {
-    /* Box-model */
-    margin-bottom: 8rem;
-  }
   .about-img img {
     /* Box-model */
     width: 14rem;
   }
 
   .about p {
-    font-size: 2.2rem;
-    margin-bottom: 5rem;
+    /* Typography */
+    text-align: right;
   }
 }
 .works picture {
@@ -662,7 +622,6 @@ h2 {
   /* Box-model */
   margin-bottom: 3rem;
   /* Typography */
-  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -744,10 +703,6 @@ h2 {
   }
 }
 /* contact */
-.contact .inner {
-  padding-bottom: 12rem;
-}
-
 .contact form {
   width: 90%;
   margin: 0 auto;
