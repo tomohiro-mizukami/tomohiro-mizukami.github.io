@@ -12,11 +12,7 @@
 
 
 .form-list li {
-  margin-bottom: 3rem;
-
-  &:last-child {
-    margin-bottom: 2rem;
-  }
+  margin-bottom: 2rem;
 }
 
 .form-list input,
@@ -50,7 +46,7 @@
 }
 
 .form-list textarea {
-  height: 200px;
+  height: 150px;
 }
 
 .form-list {

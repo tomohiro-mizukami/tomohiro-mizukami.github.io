@@ -16,7 +16,7 @@ html {
 
 body {
   /* Typography */
-  font: 1.8rem/1 YuGothic, "Original Yu Gothic", Meiryo, sans-serif;
+  font: 1.4rem/1 YuGothic, "Original Yu Gothic", Meiryo, sans-serif;
   color: $black1;
   text-align: center;
 }
@@ -48,10 +48,10 @@ ul {
 // Section's Header Area
 h2 {
   /* Box-model */
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
   /* Typography */
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 @media (min-width: 576px) {

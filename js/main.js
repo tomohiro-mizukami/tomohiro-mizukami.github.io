@@ -71,23 +71,10 @@ effects.forEach((effect) => {
 //   }
 // };
 
-// スクロールされる度にupdateButtonを実行
-// $(window).on('scroll', updateButton);
-
-// ボタンをクリックしたらページトップにスクロールする
-$('.back-to-top').on('click', (e) => {
-  // ボタンのhrefに遷移しない
-  e.preventDefault();
-
-  // 600ミリ秒かけてトップに戻る
-  $('html, body').animate({ scrollTop: 0 }, 600);
-});
-
-// ページの途中でリロード（再読み込み）された場合でも、ボタンが表示されるようにする
-// updateButton();
-
-
 // fullPage.js
 $(document).ready(function() {
-  $('#fullpage').fullpage();
+  $('#fullpage').fullpage({
+    //Navigation
+    anchors:['hero', 'concept', 'about', 'works', 'contact']
+  });
 });

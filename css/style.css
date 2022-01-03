@@ -186,7 +186,7 @@ html {
 
 body {
   /* Typography */
-  font: 1.8rem/1 YuGothic, "Original Yu Gothic", Meiryo, sans-serif;
+  font: 1.4rem/1 YuGothic, "Original Yu Gothic", Meiryo, sans-serif;
   color: #000;
   text-align: center;
 }
@@ -211,9 +211,9 @@ ul {
 
 h2 {
   /* Box-model */
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   /* Typography */
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 @media (min-width: 576px) {
@@ -365,12 +365,12 @@ h2 {
 #g-nav li a {
   color: #000;
   text-decoration: none;
-  margin: 4rem;
+  margin: 3rem;
   display: block;
   text-transform: uppercase;
   font-weight: bold;
   /*メニューを押しやすいフォントサイズに*/
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 @media (min-width: 768px) {
@@ -433,26 +433,26 @@ h2 {
   width: 30%;
 }
 
-.heading-block h2 {
+.hero h2 {
   /* Box-model */
-  margin-bottom: 3.5vh;
+  margin-bottom: 1rem;
   /* Typography */
   font-size: 5rem;
 }
 
 @media (min-width: 576px) {
-  .heading-block h2 br {
+  .hero h2 br {
     /* Box-model */
     display: none;
   }
 }
 @media (min-width: 768px) {
-  .heading-block h2 {
+  .hero h2 {
     /* Typography */
     font-size: 6.5vw;
   }
 
-  .heading-block p {
+  .hero p {
     /* Typography */
     font-size: 2vw;
   }
@@ -465,7 +465,7 @@ h2 {
 
 .concept-area section:nth-of-type(1) {
   /* Box-model */
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .concept-area section:nth-of-type(2) {
@@ -475,22 +475,22 @@ h2 {
 
 .concept-area .concept-img {
   /* Box-model */
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 .concept-area .concept-img i {
   /* Typography */
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .concept-area h3 {
   /* Box-model */
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   /* Typography */
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .concept-area p {
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 @media (min-width: 576px) {
@@ -523,7 +523,7 @@ h2 {
   /* Box-model */
   margin-bottom: 1.5rem;
   /* Typography */
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .about-img {
@@ -543,7 +543,7 @@ h2 {
   margin-bottom: 2.5rem;
   /* Typography */
   font-weight: 600;
-  line-height: 2;
+  line-height: 1.2;
 }
 .about p:last-child {
   /* Box-model */
@@ -602,7 +602,7 @@ h2 {
 .works picture {
   /* Box-model */
   display: inline-block;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 .works picture img {
   /* Box-model */
@@ -613,14 +613,14 @@ h2 {
 
 .works h3 {
   /* Box-model */
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   /* Typography */
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .works p {
   /* Box-model */
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   /* Typography */
   line-height: 1.5;
 }
@@ -715,9 +715,6 @@ h2 {
 }
 
 .form-list li {
-  margin-bottom: 3rem;
-}
-.form-list li:last-child {
   margin-bottom: 2rem;
 }
 
@@ -751,7 +748,7 @@ h2 {
 }
 
 .form-list textarea {
-  height: 200px;
+  height: 150px;
 }
 
 .form-list ::-webkit-input-placeholder {
