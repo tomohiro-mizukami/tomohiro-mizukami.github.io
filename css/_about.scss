@@ -3,12 +3,12 @@
   margin-bottom: 1.5rem;
   
   /* Typography */
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 .about-img {
   /* Box-model */
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   img {
     /* Box-model */
@@ -25,6 +25,7 @@
   margin-bottom: 2.5rem;
 
   /* Typography */
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.2;
 
@@ -37,12 +38,12 @@
 @media (min-width: 576px) {
   .about h2 {
     /* Typography */
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 
   .about-img {
     /* Box-model */
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 
     img {
       /* Box-model */

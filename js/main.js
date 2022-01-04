@@ -56,25 +56,10 @@ effects.forEach((effect) => {
   });
 });
 
-
-// ページトップへ戻るボタン
-// ボタンの表示／非表示を切り替える関数
-// const updateButton = () => {
-//   if ($(window).scrollTop() >= 300) {
-//     // 300px以上スクロールされた
-//     // ボタンを表示
-//     $('.back-to-top').fadeIn();
-//   }
-//   else {
-//     // ボタンを非表示
-//     $('.back-to-top').fadeOut();
-//   }
-// };
-
 // fullPage.js
 $(document).ready(function() {
   $('#fullpage').fullpage({
     //Navigation
-    anchors:['hero', 'concept', 'about', 'works', 'contact']
+    anchors: ['hero', 'concept', 'about', 'works', 'contact']
   });
 });

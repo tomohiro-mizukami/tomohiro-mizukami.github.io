@@ -176,6 +176,25 @@ select {
   vertical-align: middle;
 }
 
+/* iOSでのデフォルトスタイルをリセット */
+input[type=submit],
+input[type=button] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+}
+input[type=submit]::-webkit-search-decoration,
+input[type=button]::-webkit-search-decoration {
+  display: none;
+}
+input[type=submit]::focus,
+input[type=button]::focus {
+  outline-offset: -2px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -213,6 +232,22 @@ ul {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.mobile-hidden {
+  /* Box-model */
+  display: none;
+}
+@media (min-width: 576px) {
+  .mobile-hidden {
+    /* Box-model */
+    display: block;
+  }
+}
+
+.hidden {
+  /* Box-model */
+  display: none;
 }
 
 h2 {
@@ -460,11 +495,6 @@ h2 {
   margin-bottom: 4rem;
 }
 
-.concept-area section:nth-of-type(2) {
-  /* Box-model */
-  display: none;
-}
-
 .concept-area .concept-img {
   /* Box-model */
   margin-bottom: 2rem;
@@ -509,7 +539,6 @@ h2 {
   }
   .concept-area section:nth-of-type(2) {
     /* Box-model */
-    display: block;
     margin-bottom: 6rem;
   }
 }
@@ -554,12 +583,12 @@ h2 {
   /* Box-model */
   margin-bottom: 1.5rem;
   /* Typography */
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 .about-img {
   /* Box-model */
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .about-img img {
   /* Box-model */
@@ -573,6 +602,7 @@ h2 {
   /* Box-model */
   margin-bottom: 2.5rem;
   /* Typography */
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -584,12 +614,12 @@ h2 {
 @media (min-width: 576px) {
   .about h2 {
     /* Typography */
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 
   .about-img {
     /* Box-model */
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   .about-img img {
     /* Box-model */
@@ -741,7 +771,7 @@ h2 {
 }
 /* contact */
 .contact form {
-  width: 90%;
+  width: 75%;
   margin: 0 auto;
 }
 

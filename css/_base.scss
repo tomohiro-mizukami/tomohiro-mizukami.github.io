@@ -47,6 +47,21 @@ ul {
   text-transform: uppercase;
 }
 
+.mobile-hidden {
+  /* Box-model */
+  display: none;
+
+  @media (min-width: 576px) {
+    /* Box-model */
+    display: block;
+  }
+}
+
+.hidden {
+  /* Box-model */
+  display: none;
+}
+
 // Animate.css
 .animate__animated {
   // opacity: 0;

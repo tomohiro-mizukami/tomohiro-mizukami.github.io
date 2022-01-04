@@ -3,11 +3,6 @@
   margin-bottom: 4rem;
 }
 
-.concept-area section:nth-of-type(2) {
-  /* Box-model */
-  display: none;
-}
-
 .concept-area .concept-img {
   /* Box-model */
   margin-bottom: 2rem;
@@ -57,7 +52,6 @@
 
     &:nth-of-type(2) {
       /* Box-model */
-      display: block;
       margin-bottom: 6rem;
     }
   }
@@ -67,6 +61,7 @@
   .concept h2 {
     margin-bottom: 10rem;
   }
+
   .concept-area {
     /* Box-model */
     justify-content: space-between;
