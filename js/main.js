@@ -119,3 +119,9 @@ $(document).ready(function() {
   });
 
 })(jQuery);
+
+
+const form = document.getElementById('my-form');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+});

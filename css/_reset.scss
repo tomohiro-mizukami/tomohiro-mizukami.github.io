@@ -179,8 +179,11 @@ select {
 }
 
 /* iOSでのデフォルトスタイルをリセット */
-input[type="submit"],
-input[type="button"] {
+// input[type="submit"],
+// input[type="button"]
+input,
+textarea
+{
   border-radius: 0;
   -webkit-box-sizing: content-box;
   -webkit-appearance: button;

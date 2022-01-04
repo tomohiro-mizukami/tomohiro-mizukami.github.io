@@ -177,8 +177,8 @@ select {
 }
 
 /* iOSでのデフォルトスタイルをリセット */
-input[type=submit],
-input[type=button] {
+input,
+textarea {
   border-radius: 0;
   -webkit-box-sizing: content-box;
   -webkit-appearance: button;
@@ -186,12 +186,12 @@ input[type=button] {
   border: none;
   box-sizing: border-box;
 }
-input[type=submit]::-webkit-search-decoration,
-input[type=button]::-webkit-search-decoration {
+input::-webkit-search-decoration,
+textarea::-webkit-search-decoration {
   display: none;
 }
-input[type=submit]::focus,
-input[type=button]::focus {
+input::focus,
+textarea::focus {
   outline-offset: -2px;
 }
 
