@@ -263,6 +263,11 @@ h2 {
     font-size: 5rem;
   }
 }
+/* All delay classes will take half the time to start */
+:root {
+  --animate-delay: .3s;
+}
+
 .header h1 {
   /* Positioning */
   position: fixed;
@@ -559,6 +564,19 @@ h2 {
     margin-bottom: 0;
   }
 
+  .concept-area section {
+    /* Box-model */
+  }
+  .concept-area section:nth-of-type(1) {
+    order: 1;
+  }
+  .concept-area section:nth-of-type(2) {
+    order: 3;
+  }
+  .concept-area section:nth-of-type(3) {
+    order: 2;
+  }
+
   .concept-area .concept-img {
     /* Box-model */
     margin-bottom: 2.5rem;
@@ -663,12 +681,11 @@ h2 {
     text-align: right;
   }
 }
-.works picture {
+.works figure {
   /* Box-model */
-  display: inline-block;
   margin-bottom: 1rem;
 }
-.works picture img {
+.works figure img {
   /* Box-model */
   display: block;
   margin-left: auto;
@@ -716,7 +733,7 @@ h2 {
     margin-bottom: 2.5rem;
   }
 
-  .works picture {
+  .works figure {
     /* Box-model */
     margin-bottom: 1.5rem;
   }
@@ -747,7 +764,7 @@ h2 {
     margin-bottom: 1.5rem;
   }
 
-  .works picture {
+  .works figure {
     /* Box-model */
     margin-bottom: 2rem;
   }

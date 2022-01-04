@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tomohiro Mizukami|Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <meta name="description" content=フリーランスWebディベロッパー水上智紘のポートフォリオサイト>
 
   <!-- Normalize.css -->
@@ -26,7 +27,7 @@
 
   <header class="header">
     <h1 class="animate__animated animate__fadeInDown">
-      <a class="back-to-top" href="#hero">上</a>
+      <a class="back-to-top" href="#hero">T</a>
     </h1>
   </header>
 
@@ -49,7 +50,7 @@
 
     <!--Hero-->
     <section class="hero section">
-      <div class="heading-block animate__animated animate__backInUp">
+      <div class="heading-block animate__animated animate__backInUp animate__delay-1s">
         <h2>Tomohiro<br>Mizukami</h2>
         <p class="uppercase">Freelance Web Developer</p>
       </div>
@@ -58,10 +59,10 @@
     <!--Concept-->
     <section class="concept section">
       <div class="inner">
-        <h2 class="uppercase is-animated__single">Concept</h2>
+        <h2 class="uppercase zoom-in animate__delay-1s">Concept</h2>
         <div class="concept-area">
           <!-- 1 -->
-          <section class="is-animated">
+          <section class="fade-in-up animate__delay-2s">
             <div class="concept-img">
               <i class="far fa-smile-wink"></i>
             </div>
@@ -73,7 +74,7 @@
             </p>
           </section>
           <!-- 2 -->
-          <section class="mobile-hidden is-animated">
+          <section class="mobile-hidden fade-in-up animate__delay-3s">
             <div class="concept-img">
               <i class="fas fa-bullseye"></i>
             </div>
@@ -85,13 +86,13 @@
             </p>
           </section>
           <!-- 3 -->
-          <section class="is-animated">
+          <section class="fade-in-up animate__delay-4s">
             <div class="concept-img">
               <i class="fas fa-mobile-alt"></i>
             </div>
             <h3 class="uppercase">Simple</h3>
             <p>
-              シンプルなデザイン。<br>
+              シンプルなレイアウト。<br>
               読みやすく、<br>
               モバイルフレンドリー。
             </p>
@@ -104,23 +105,23 @@
     <section class="about section">
       <div class="inner">
         <div class="about-img-area">
-          <h2 class="is-animated__single">水上 智紘</h2>
-          <figure class="about-img is-animated__single">
+          <h2 class="zoom-in animate__delay-1s">水上 智紘</h2>
+          <figure class="about-img zoom-in animate__delay-2s">
             <img src="images/profile.jpg" alt="水上智紘の顔写真">
           </figure>
         </div>
         <div class="about-sentence-area">
-          <p class="is-animated">インドのシリコンバレーで<br>
+          <p class="fade-in-up animate__delay-3s">インドのシリコンバレーで<br>
             虫に刺されながら<br>
             Webサイト制作を学びました。<br>
           </P>
-          <p class="mobile-hidden is-animated">
+          <p class="mobile-hidden fade-in-up animate__delay-4s">
             「真面目すぎる」と<br>
             よく言われますが、<br>
             あなたの問題解決には<br>
             柔軟に対応していきます。
           </p>
-          <p class="is-animated">
+          <p class="fade-in-up animate__delay-5s">
             デザインから<br>
             Webサイトのワードプレス化まで<br>
             丸ごとおまかせください。
@@ -133,14 +134,13 @@
     <section class="works section">
       <div class="inner">
         <h2 class="hidden">Works</h2>
-        <div class="works-area carousel is-animated__single">
+        <div class="works-area carousel">
 
           <section>
             <a href="https://tomohiromizukami.com/greenhouse/" target=”_blank”>
-              <picture>
-                <source media="(min-width:576px)" srcset="images/carousel/corporate_576.png">
-                <img src="images/carousel/corporate.png" alt="コーポレートサイト">
-              </picture>
+              <figure>
+                <img src="images/carousel/corporate.webp" alt="コーポレートサイト">
+              </figure>
             </a>
             <h3>コーポレートサイト</h3>
             <p>ポートフォリオに載せるために作成しました。Adobe XDのデザインカンプからコーディングし、ワードプレス化しました。</p>
@@ -155,10 +155,9 @@
 
           <section>
             <a href="https://tomohiromizukami.com/sunsetclouds/" target=”_blank”>
-              <picture>
-                <source media="(min-width:576px)" srcset="images/carousel/blog_576.png">
-                <img src="images/carousel/blog.png" alt="コーポレートサイト">
-              </picture>
+              <figure>
+                <img src="images/carousel/blog.webp" alt="ブログサイト">
+              </figure>
             </a>
             <h3>ブログサイト</h3>
             <p>英語表記のシンプルなサイトをポートフォリオ用に作成しました。既存サイトをワードプレス化しました。</p>
@@ -177,12 +176,12 @@
       <div class="inner">
         <h2 class="hidden">Contact</h2>
         <form id="my-form" method="post" action="index.html" enctype="multipart/form-data">
-          <ul class="form-list is-animated__single">
+          <ul class="form-list">
             <li><input type="text" name="Name" placeholder="お名前"></li>
             <li><input type="email" name="E-mail" placeholder="メールアドレス"></li>
             <li><textarea name="Message" placeholder="メッセージ"></textarea></li>
           </ul>
-          <div class="submit-btn is-animated">
+          <div class="submit-btn">
             <input type="submit" name="Submit" value="送信">
           </div>
         </form>

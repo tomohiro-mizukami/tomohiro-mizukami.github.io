@@ -82,3 +82,10 @@ h2 {
     font-size: 5rem;
   }
 }
+
+
+// Animate.css
+/* All delay classes will take half the time to start */
+:root {
+  --animate-delay: .3s;
+}
