@@ -103,7 +103,7 @@ $(document).ready(function() {
       else if ((index == 1 || index == 2 || index == 3 || index == 4) && nextIndex == 5) {
         $contactForm.addClass('animate__animated animate__zoomIn animate__delay-1s');
         $contactBtn.addClass('animate__animated  animate__fadeInUpBig animate__delay-2s');
-        
+
         // $isAnimatedFifthSingle.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
         //   $(this).removeClass('lightSpeedIn').addClass('zoomOutDown');
         // });
