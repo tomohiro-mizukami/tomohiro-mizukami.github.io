@@ -1,121 +1,108 @@
-// ハンバーガーメニュー
-$(".openbtn").click(() => { //ボタンがクリックされたら
-  $(".openbtn").toggleClass('active'); //ボタン自身に activeクラスを付与し
-  $("#g-nav").toggleClass('panelactive'); //ナビゲーションにpanelactiveクラスを付与
-  $(".circle-bg").toggleClass('circleactive'); //丸背景にcircleactiveクラスを付与
+// Hamburger Menu
+$('.hamburger__menu').on('click', function() {
+  $('.hamburger__menu, .hamburger__nav, .hamburger__bg').toggleClass('open');
 });
 
-$("#g-nav a, #header a").click(() => { //ナビゲーションのリンクがクリックされたら
-  $(".openbtn").removeClass('active'); //ボタンの activeクラスを除去し
-  $("#g-nav").removeClass('panelactive'); //ナビゲーションのpanelactiveクラスを除去
-  $(".circle-bg").removeClass('circleactive'); //丸背景のcircleactiveクラスを除去
+$('.hamburger__nav a').on('click', function() {
+  $('.hamburger__menu, .hamburger__nav, .hamburger__bg').removeClass('open');
+});
+
+$(window).resize(function() {
+  $('.hamburger__menu, .hamburger__nav, .hamburger__bg').removeClass('open');
+})
+
+
+// Swiper
+const swiper = new Swiper('.swiper', {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      spaceBetween: 40,
+    },
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
 
 
-// slick
-$(document).ready(function() {
-  $('.carousel').slick({
-    autoplay: true, // 自動再生
-    autoplaySpeed: 5000, // 自動再生の速さ、単位はミリ秒
-    arrows: false, // 左右のナビゲーションを無効にする
-    dots: true, // スライド下にドットを表示する
-    fade: false, // スライドの切り替えをフェードにする 
-  });
+// Accordion
+$('.qa__q').click(function () {
+  $(this).next('.qa__a').slideToggle();
+  $(this).find('.qa__icon').toggleClass('open');	
 });
 
 
-// fullPage.js + Animate.css
-(function($) {
-
-  'use strict';
-
-  // variables
-  var $conceptZoomIn = $('.concept .zoom-in'),
-    $conceptFadeInUp = $('.concept .fade-in-up'),
-    $aboutZoomIn = $('.about .zoom-in'),
-    $aboutFadeInUp = $('.about .fade-in-up'),
-    $works = $('.works-area'),
-    $contactForm = $('.contact .form-list'),
-    $contactBtn = $('.contact .submit-btn');
-
-  // initialize fullPage
-  $('#fullpage').fullpage({
-
-    navigation: true,
-    anchors: ['hero', 'concept', 'about', 'works', 'contact'],
-    onLeave: function(index, nextIndex, direction) {
-
-      /**
-       * use the following condition: 
-       *
-       *   if( index == 1 && direction == 'down' ) {
-       *
-       * if you haven't enabled the dot navigation
-       * or you aren't interested in the animations that occur 
-       * when you jump (using the dot navigation) 
-       * from the first section to another sections 
-       */
-
-      // Concept animation
-      if (index == 1 && nextIndex == 2) {
-        $conceptZoomIn.addClass('animate__animated animate__zoomIn');
-        $conceptFadeInUp.addClass('animate__animated  animate__fadeInUp');
-      }
-
-      /**
-       * use the following condition: 
-       *
-       *   else if( index == 2 && direction == 'down' ) {
-       *
-       * if you haven't enabled the dot navigation
-       * or you aren't interested in the animations that occur 
-       * when you jump (using the dot navigation) from the first section to the third one 
-       */
-
-      // About animation
-      else if ((index == 1 || index == 2) && nextIndex == 3) {
-        $aboutZoomIn.addClass('animate__animated animate__zoomIn');
-        $aboutFadeInUp.addClass('animate__animated  animate__fadeInUp');
-      }
+ // お問い合わせフォーム：送信後メッセージ
+ let $form = $( '#js-form' )
+ $form.submit(function(e) { 
+   $.ajax({ 
+    url: $form.attr('action'), 
+    data: $form.serialize(), 
+    type: "POST", 
+    dataType: "xml", 
+    statusCode: { 
+       0: function() { 
+         //送信に成功したときの処理 
+         $form.slideUp()
+         $( '#js-success' ).slideDown()
+       }, 
+       200: function() { 
+         //送信に失敗したときの処理 
+         $form.slideUp()
+         $( '#js-error' ).slideDown()
+       }
+     } 
+   });
+   return false; 
+ }); 
 
 
-      /**
-       * use the following condition:
-       *
-       *   else if( index == 3 && direction == 'down' ) {
-       *
-       * if you haven't enabled the dot navigation
-       * or you aren't interested in the animations that occur 
-       * when you jump (using the dot navigation) 
-       * from the first or second section to the fourth one 
-       */
-
-      // Works animation
-      else if ((index == 1 || index == 2 || index == 3) && nextIndex == 4) {
-        $works.addClass('animate__animated animate__zoomIn animate__delay-2s');
-
-        // $isAnimatedFourthSingle.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-        //   $(this).removeClass('lightSpeedIn').addClass('zoomOutDown');
-        // });
-      }
-
-      // Contact animation
-      else if ((index == 1 || index == 2 || index == 3 || index == 4) && nextIndex == 5) {
-        $contactForm.addClass('animate__animated animate__zoomIn animate__delay-1s');
-        $contactBtn.addClass('animate__animated  animate__fadeInUpBig animate__delay-2s');
-
-        // $isAnimatedFifthSingle.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-        //   $(this).removeClass('lightSpeedIn').addClass('zoomOutDown');
-        // });
-      }
-    }
-
-  });
-
-})(jQuery);
+ // お問い合わせフォーム：必須項目の入力チェック
+ let $submit = $( '#js-submit' )
+ $( '#js-form input[type="text"]' ).keyup( 'change', function() {
+   if(
+     $( '#js-form input[placeholder="氏名"]' ).val() !== "" &&
+     $( '#js-form input[placeholder="フリガナ"]' ).val() !== ""
+   ) {
+     // 全て入力された時
+     $submit.attr( 'disabled', false )
+   } else {
+     // 全て入力されていない時
+     $submit.attr( 'disabled', true )
+   }
+ })
 
 
-const form = document.getElementById('my-form');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+ // Smooth Scrolling
+$('a[href^="#"]').on('click', function() {
+
+  let header = $('.header').innerHeight();
+  let id = $(this).attr('href');
+  let position = (id == '#') ? 0 : $(id).offset().top - header;
+
+  $('html, body').animate({
+    scrollTop: position
+  },
+  300);
 });
+
+
+// トップへ戻るボタン の表示/非表示
+$(window).on("scroll", function() {
+  if (100 < $(this).scrollTop()) {
+    $('#toTop').addClass('show');
+  } else {
+    $('#toTop').removeClass('show');
+  }
+});
+
+
+// WOW.js
+new WOW().init();
+
+
